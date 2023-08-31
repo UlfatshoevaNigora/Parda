@@ -1,0 +1,9 @@
+@model AddClient     
+<form action="update" method="post" >
+  <div class="mb-3">
+    <input asp-for="Id" type="number" hidden="hidden" >
+    <label for="exampleInputEmail1" class="form-label"><p class="p3">Имя</p> </label>
+    <input asp-for="Name" type="text" class="inp1" id="exampleInputEmail1" placeholder="Name" >
+  </div>
+  <button type="submit" class="btn6">Готово</button>
+</form>

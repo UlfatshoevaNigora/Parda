@@ -1,0 +1,22 @@
+@model AddOrder
+<form action="update" method="post">
+    <div>
+     <input asp-for="Id" type="number" hidden="hidden" >
+       <label for="exampleInputEmail1" class="form-label">Тип шитья </label>
+    <input asp-for="SewingType" type="text" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Длина карниза</label>
+    <input asp-for="CorniceWidth" type="number" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Высота окна </label>
+    <input asp-for="Height" type="number" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Ширина материала </label>
+    <input asp-for="MaterialWidth" type="number" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Цена за один метр </label>
+    <input asp-for="PriceOfOneMetr" type="number" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Id клиента </label>
+    <input asp-for="ClientId" type="number" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Имя клиента </label>
+    <input asp-for="ClientName" type="text" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Описание </label>
+    <input asp-for="Description" type="text" class="form-control"  ></div>
+  <button type="submit" class="btn6">Обновить</button>
+</form>

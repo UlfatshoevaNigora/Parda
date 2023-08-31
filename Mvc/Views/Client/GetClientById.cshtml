@@ -1,0 +1,36 @@
+@model GetClient 
+<div class="div13">
+<table>
+  <tr>
+    <th class="th12">Id клиента</th>
+    <th class="th13">Имя клиента</th>
+    <th class="th14">Имя доставщика</th>
+    <th class="th15">Тип шитья</th>
+    <th class="th16">Высота окна</th>
+    <th class="th17">Ширина материала</th>
+    <th class="th18">Длина карниза</th>
+    <th class="th19">Описание</th>
+    <th class="th20">Цена за один метр</th>
+    <th class="th22">Действие</th>
+    <th class="th23">Действие</th>
+    <th class="th24">Действие</th>
+  </tr>
+   @foreach(var orders in @Model.OrdersOfClient)
+{
+  <tr class="tr1">
+   <td>@Model.Id</td> 
+   <td> @Model.Name</td>    
+    <td><p> @orders.ClientName</p></td>
+    <td>@orders.SewingType</td>
+    <td>@orders.Height</td>
+    <td>@orders.MaterialWidth</td>
+    <td>@orders.CorniceWidth</td>
+    <td>@orders.Description</td>
+    <td>@orders.PriceOfOneMetr</td>
+    <td><a href="/Order/Update/@orders.Id" class="a1"><button class="btn5" type="button" >Обновить</button></a></td>
+    <td><a href="/Order/Delete/@orders.Id" class="a1"><button class="btn5" type="button">Удалить</button></a></td>
+    <td> <a href="/Order/Create" class="a1"><button class="btn5" type="button">Hовый заказ</button></a></td>
+  </tr>
+}
+</div>
+

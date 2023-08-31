@@ -1,0 +1,23 @@
+@model List<GetClient>
+<div class="div3">
+ <div class="div4" >
+   @foreach (var client in Model)
+  {
+    <div class="div1"  >
+    <p class=p2>@client.Id</p>
+    <p class="p1">@client.Name</p>
+    <a href="/Client/GetClientById/@client.Id" class="a1"><button class="btn5" type="button" >Заказы</button></a>
+    <a href="/Client/Update/@client.Id" class="a1"><button class="btn5" type="button" >Обновить</button></a>
+    <a href="/Client/Delete/@client.Id" class="a1"><button class="btn5" type="button">Удалить</button></a>
+ </div>
+ }
+ </div>
+ <div class="div2">
+    <a href="/Client/create"><button class="btn7" type="button" >Новый клиент
+    </button> </a>
+ </div>
+
+ <div>
+ </div>
+
+</div>

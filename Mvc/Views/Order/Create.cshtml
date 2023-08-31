@@ -1,0 +1,22 @@
+@model AddOrder
+<form action="create" method="post" >
+  <div class="mb-3">
+     <label for="exampleInputEmail1" class="form-label">Тип шитья </label>
+    <input asp-for="SewingType" type="text" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Длина карниза</label>
+    <input asp-for="CorniceWidth" type="number" step=".01" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Высота окна </label>
+    <input asp-for="Height" type="number" step=".01" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Ширина материала </label>
+    <input asp-for="MaterialWidth" type="number" step=".01" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Цена за один метр </label>
+    <input asp-for="PriceOfOneMetr" type="number" step=".01" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Id клиента </label>
+    <input asp-for="ClientId" type="number" step=".01" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Имя клиента </label>
+    <input asp-for="ClientName" type="text" class="form-control"  >
+     <label for="exampleInputEmail1" class="form-label">Описание </label>
+    <input asp-for="Description" type="text" class="form-control"  >
+  </div>
+  <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

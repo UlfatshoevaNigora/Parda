@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Mvc.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><p class="p2">Домой</p></a>
+        </li>
+       <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Client" asp-action="Index"><p class="p2">Клиенты</p></a>
+                    </li>
+        <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index"><p class="p2">Заказы</p></a>
+                    </li>
+         <div class="form1">
+       <form class="d-flex  " method="get" action="/client/index">
+                    <input class="inp2" name="name" type="search"  placeholder="Имя" aria-label="Поиск">
+                    <button class="btn5" type="submit">Поиск</button>
+                </form></div>
+    </div>
+  </div>
+</nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

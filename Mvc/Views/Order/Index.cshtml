@@ -1,0 +1,37 @@
+@model List<GetOrder>
+    <div class="div9">
+
+<table>
+  <tr>
+    <th class="th1">Id клиента</th>
+    <th class="th2">Имя клиента</th>
+    <th class="th3">Тип шитья</th>
+    <th class="th4">Высота окна</th>
+    <th class="th5">Ширина материала</th>
+    <th class="th6">Длина карниза</th>
+    <th class="th7">Описание</th>
+    <th class="th8">Цена за один метр</th>
+    <th class="th9">Цена за заказ</th>
+    <th class="th10">Действие</th>
+    <th class="th11">Действие</th>
+  </tr>
+  @foreach (var order in Model)
+{
+  <tr>
+    <td>@order.ClientId </td>
+    <td>@order.ClientName</td>
+    <td>@order.SewingType</td>
+    <td>@order.Height</td>
+    <td>@order.MaterialWidth</td>
+    <td>@order.CorniceWidth</td>
+    <td>@order.Description</td>
+    <td>@order.PriceOfOneMetr</td>
+    <td>@order.PriceOfOrder</td>
+    <td><a href="/Order/Update/@order.Id" class="a1"><button class="btn5" type="button" >Обновить</button></a></td>
+    <td><a href="/Order/Delete/@order.Id" class="a1"><button class="btn5" type="button">Удалить</button></a></td>
+  </tr>
+}
+</table>
+</div>
+    
+
